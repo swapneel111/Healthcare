@@ -4,491 +4,587 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apollo 24/7</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-    crossorigin="anonymous">
-    <script
-      src="https://kit.fontawesome.com/24c494a6b6.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
-    crossorigin="anonymous"></script>
+    <title>COSMOS MED</title>
+    <style>
+        body{
+            background-color:rgb(220,223,206);
+        }
+        #container{
+            width: 100%;
+            height: 4500px;
+            background-color: rgb(13, 53, 80);
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        #container > #head{
+            height:120px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            /* flex-wrap: wrap; */
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            box-shadow: rgba(52, 51, 51, 0.24) 0px 3px 8px;
+        }
+        #container > #dummy{
+            height:140px;
+            width:100%;
+            
+        }
+        #head > .headL{
+            width:40%;
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+        .headL > img{
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+        }
+         .headR{
+            background-color: aliceblue;
+            width:50%;
+            display: flex;
+            margin-left:33%;
+
+           
+            /* height:100% */
+        }
+        .headR > div{
+            margin: 10px;
+            width: 20%;
+            height: 80%;
+            flex-wrap: wrap;
+        }
+        .navIMG{
+            width: 100px;
+            border: auto;
+        }
+        .navIMG:hover{
+            border-bottom:2px solid rgb(13, 54, 54);
+        }
+        .navL{
+            border:none;
+           
+        }
+        .navL:hover{
+            border-bottom:2px solid teal;
+        }
+        .navL > h5{
+            color:rgb(2,71,91);
+            border-bottom: 1px solid;
+         
+        }
+        .navL > p{
+            color:rgb(121, 160, 173);
+            font-size: 13px;
+            margin-top: -16px;
+        }
+        .navlogo{
+            width: 80%;
+           
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        /* test */
+        .container{
+            width: 100%;
+            background-color: transparent;
+            margin-top: -5px;
+        }
+        #box1{
+            height: 385px;
+            display: flex;
+        }
+        #box1 > .box1L{
+            width: 100%;
+        }
+        #box1 > .box1R{
+            width: 100%;
+        }
+        .box1L > div{
+            margin: 5px;
+        }
+        #container > #box3{
+            width: 100%;
+            height: 250px;
+            background-color: rgb(247,248,245);
+        }
+       
+        .flex > .arrowL{
+            margin-top: 70px;
+        }
+        .flex > .ad{
+           width: 100%;
+           height: 60%;
+          
+        }
+        .dot{
+            flex-wrap: wrap;
+            height: 30px;
+            margin-top: 20px;
+        }
+        .dot> div{
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: grey;
+            display: inline-block;
+            margin: 2px;
+        }
+        #box4{
+            height: 180px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+            background-color: rgb(247,248,245);
+        }
+        #box4 > .customer{
+            width: 87%;
+            height: 80%;
+            margin: auto;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .customer > .query{
+            flex-wrap: wrap;
+            width: 21%;
+            height: 30%;
+            display: inline-block;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .query > h3{
+            color: rgb(252,170,109);
+            font-size: 15px;
+            text-align: center;
+        }
+        #box5{
+            height: 240px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+            background-color: rgb(247,248,245);
+        }
+        .advertise{
+            margin: auto;
+            width:88%;
+            height: 170px;
+        }
+        .advertise > img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        #box6{
+            height: 380px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+            background-color: rgb(247,248,245);
+        }
+        .article{
+            height: 90%;
+            width: 88%;
+            margin: auto;
+            border-radius: 10px;
+        }
+        .article > div{
+            height:33%;
+            width:100%;
+            border-radius: 10px;
+        }
+        .article1{
+            background-image: url('http://www.thestem.com/wp-content/uploads/2018/05/digital-health.png');
+        }
+        .article1 > h3{
+            color: white;
+            margin: 20px;
+            font-size: 28px;
+        }
+        .article1 > p{
+            color: rgba(22, 3, 3, 0.951);
+            margin: 20px;
+            font-size: 16px;
+        }
+        .article2{
+            background-color: white;
+            flex-wrap: wrap;
+        }
+        .article2 > .art2{
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 20px;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+        .art3{
+            border: 1px solid rgb(2,71,91);
+            display: inline-block;
+            height: 38px;
+            width: 27%;
+            margin-top:-10px;
+            margin-left: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #box7{
+            height: 2050px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        #content{
+            width: 95%;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        .heading{
+            color:rgb(159, 224, 241);
+            font-size:15px;
+            font-weight: bold;
+        }
+        .para{
+            color:rgb(159, 224, 241);
+            font-size:15px;
+        }
+        .paraMargin{
+            margin-top: -10px;
+        }
+        #box8{
+            height: 900px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+            background-color: black;
+        }
+        .contentBlack{
+            width: 95%;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        .contentBlack > img{
+            height: 55%;
+            width: 12%;
+            margin-left: 430px;
+            margin-top: 20px;
+        }
+        .yellow{
+            color:rgb(247,181,21);
+            font-size:15px;
+        }
+        .contentBlack > .yellowDiv{
+            width: 100%;
+            height: 35px;
+        }
+        .yellowDiv > div{
+            display: inline-block;
+        }
+        .white{
+            color: white;
+            font-size:15px;
+            margin-left: 20px;    
+        }
+
+        .bottomtext1
+{
+    width: 96%;
+    border: 1px solid white;
+    margin-left: 22px;
+    margin-top: 85px;
+}
+.bottomtext1 p
+{
+   margin: 0px;
+   padding: 0px;
+   color: #12495b;
+}
+.bt1
+{
+    font-weight: bold;
+}
+.bottomtext2
+{
+    width: 96%;
+    /* border: 1px solid black; */
+    
+    margin-left: 22px;
+   background-color: rgb(2,13,17)
+}
+.bottomtext2 img
+{
+    width: 100px;
+    margin-left: 400px;
+    margin-top: 30px;
+}
+.bottomtext2 p
+{
+   margin: auto;
+   padding: 10px;
+}
+.bt11
+{
+    font-weight: bold;
+    color: #f9b415;
+}
+.bottomtext2 li
+{
+   margin-right: 30px;
+   margin-left: 10px;
+   margin-bottom:10px;
+   color: white;
+}
+
+    </style>
 </head>
 <body>
-        <form>
-            <div>
-                <header>
-                    <div id="navbar">
-                        <a href="index.html"><img class="navimg" src="https://newassets.apollo247.com/images/ic_logo.png" /></a>
-                        <div class="right">
-                            <div class="doc" data-hover="Doctors">
-                                <a class="na" href="" > <!--add DOCTORS page here -->
-                                    <h5>DOCTORS</h5>
-                                    <hr class="hr1" />
-                                    <p>Consult Online</p>
-                                </a>
-                            </div>
-                            <div class="pharma" data-hover="Pharmacy">
-                                <a class="na" href="" >  <!--add PHARMACY page here-->
-                                    <h5>PHARMACY</h5>
-                                    <hr class="hr1"/>
-                                    <p>Medicines & other products</p>
-                                </a>
-                            </div>
-                            <div class="labtest" data-hover="Lab Test">
-                                <a class="na" href="" >  <!--add LAB TEST page here-->   
-                                    <h5>LAB TESTS</h5>
-                                    <hr class="hr1"/>
-                                    <p>Health check-ups</p>
-                                </a>
-                            </div>
-                            <div class="covid" data-hover="Covid-19">
-                                <a class="na" href="" >     <!--add COVID-19 page here-->
-                                    <h5>COVID-19</h5>
-                                    <hr class="hr1"/>
-                                    <p>Latest updates</p>
-                                </a>
-                            </div>
-                            <div class="cart">
-                                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>   <!--add CART here-->
-                            </div>
-                            <div class="signup" data-hover="Login/Signup">
-                                <a href=""><i class="fa-solid fa-circle-user"></i></a>  <!--add SIGNUP page here-->
-                            </div>
-                        </div>
-                    </div>    
-                </header>
-                <div id="container">
-                    <div id="first">
-                        <div id="ff1" >
-                            <h1>Hello There!</h1>
-                            <h4>Always caring about your health, we are here to help you!</h4>
-                            <div id="btn">
-                                <div id="b1" ><a href="" >  <!--add DOCTORS page here-->
-                                    <div id="set" ><img src="https://newassets.apollo247.com/images/ic-doctor.svg" />
-                                    <p>Book Appointment with Apollo Doctors</p><span><i class="fa-solid fa-angle-right"></i></span></div>
-                                </a></div>
-                                <div id="b2" ><a href="" >  <!--add PHARMACY here-->
-                                    <div id="set" ><img class="s1" src="https://newassets.apollo247.com/images/ic_medicines.png"/>
-                                        <p>Buy Medicines and Essentils</p><span><i class="fa-solid fa-angle-right"></i></span></div>
-                                </a></div>
-                                <div id="b3" ><a href="" >  <!--add LAB TEST here-->
-                                    <div id="set" ><img src="https://newassets.apollo247.com/images/ic_home_test.svg"/>
-                                        <p>Book Lab Test</p></div>
-                                </a></div>
-                                <div id="b4" ><a href="" >  <!--health record-->
-                                    <div id="set" ><img src="https://newassets.apollo247.com/images/ic-prescription.svg"/>
-                                        <p class="b4">View Health Records</p></div>
-                                </a></div>
-                            </div>
-                        </div>
-                        <div class="im"><img class="im" src="https://newassets.apollo247.com/images/img-doctors@1x.jpg" /></div>
-                    </div>
-                    <div id="second">
-                        <div id="secondCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-bs-target="#secondCarousel" data-bs-slide-to="0" class="active"></li>
-                                <li data-bs-target="#secondCarousel" data-bs-slide-to="1"></li>
-                                <li data-bs-target="#secondCarousel" data-bs-slide-to="2"></li>
-                                <li data-bs-target="#secondCarousel" data-bs-slide-to="3"></li>
-                                <li data-bs-target="#secondCarousel" data-bs-slide-to="4"></li>
-                                <li data-bs-target="#secondCarousel" data-bs-slide-to="5"></li>
-                                <li data-bs-target="#secondCarousel" data-bs-slide-to="6"></li>
-                                <li data-bs-target="#secondCarousel" data-bs-slide-to="7"></li>
-                                <li data-bs-target="#secondCarousel" data-bs-slide-to="8"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active" style="background-image:url(./image1.jpg);">
-                                    <div class="container2">
-                                        <a href="" class="btn btn-lg btn-primay"><img src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/w/e/web_circle_3.jpg" alt=""></a>   <!--add pharmacy-->
-                                    </div>
-                                </div>    
-                                <div class="carousel-item">
-                                        <div class="container2">
-                                            <a href="" ><img src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/a/y/ayurveda_offers_web_4.jpg" alt=""></a>   <!--add pharmacy-->
-                                        </div>    
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="container2">
-                                        <a href="" class="btn btn-lg btn-primay"><img src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/g/n/gnc-1460x340.jpg" alt=""></a>   <!--add pharmacy-->
-                                    </div>    
-                                </div>
-                                
-                                <div class="carousel-item">
-                                    <div class="container2">
-                                        <a href="" class="btn btn-lg btn-primay"><img src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/s/e/sexual_wellness_offers_web_1.jpg" alt=""></a>   <!--add pharmacy-->
-                                    </div>    
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="container2">
-                                        <a href="" class="btn btn-lg btn-primay"><img src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/c/e/cetaphil_offers_web_1.jpg" alt=""></a>     <!--add pharmacy-->
-                                    </div>    
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="container2">
-                                        <a href="" class="btn btn-lg btn-primay"><img src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/s/u/super_30_10.jpg" alt=""></a>    <!--add pharmacy-->
-                                    </div>    
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="container2">
-                                        <a href="" class="btn btn-lg btn-primay"><img src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/1/4/1460x340-100.jpg" alt=""></a>   <!--add pharmacy-->
-                                    </div>    
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="container2">
-                                        <a href="" class="btn btn-lg btn-primay"><img src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/p/n/pn-1460x340.jpg" alt=""></a>   <!--add pharmacy-->
-                                    </div>    
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="container2">
-                                        <a href="" class="btn btn-lg btn-primay"><img src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/s/e/sexual_wellness_offers_web_1.jpg" alt=""></a>  <!--add pharmacy-->
-                                    </div>    
-                                </div>
-                            </div>    
-                            <a href="#secondCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
-                                <span class="sr-only">previous</span>
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            </a>
-                            <a href="#secondCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
-                                <span class="sr-only">next</span>
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div id="third" >
-                        <div id="cov">
-                            <div>
-                                <div>
-                                    <h3 id="h3">For COVID-19 Vaccination related queries</h3>
-                                    <div class="faq">
-                                        <div class="th" ><a href=""><span><i class="fa-solid fa-comments-question-check"></i></span>FAQs & Articles</a></div>   <!--add covid-19 here-->
-                                        <div class="th" ><a href=""><span><i class="fa-solid fa-phone"></i></span>Vaccination Queries</a></div>
-                                        <div class="th" ><a href=""><span><i class="fa-solid fa-message-dots"></i></i></span>Chat with us</a></div>
-                                        <div class="th" ><a href="https://selfregistration.cowin.gov.in/" target="_blank"><span><i class="fa-solid fa-syringe"></i></span>Cowin Registration</a></div>   <!--COWINgov page added-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="onlyimg">
-                        <div>
-                            <img class="mid" src="https://newassets.apollo247.com/images/prohealth/prohealthSliderTwo.jpg" alt="">
-                        </div>
-                    </div>
-                    <div id="fourth" >
-                        <div class="ff">
-                            <div>
-                                <div class="article">
-                                    <h2>HEALTH ARTICLES & RESOURCES</h2>
-                                    <p>Make better health choices with our curated blogs, videos and expert advice.</p>
-                                </div>
-                                <div class="blog">
-                                    <h2 id="h2" >HEALTHH BLOG</h2>
-                                    <p class="hel">Exlore healthcare content created every day by our experts.</p>
-                                </div>
-                                <div class="ft" > <a href=""><span><i class="fa-light fa-message-lines"></i></span>Read the latest Articles</a> </div>    <!--add COVID-19 page here-->
-                                <hr class="hrtag" />
-                                <p>YOU CAN ALSO</p>
-                                <div class="also">
-                                    <a href="https://www.apollo247.com/blog/health-tools" target="_blank">    <!--added-->
-                                        <img src="https://newassets.apollo247.com/images/ic_psychologist.svg" alt=""> Hwalth-tools
-                                    </a>
-                                    <a href="">
-                                        <img class="exp" src="https://assets.apollo247.com/images/ic_healthy_life.png" alt=""> Explore HealthyLife
-                                    </a>
-                                    <a href="">
-                                        <img class="kavach" src="https://newassets.apollo247.com/images/apollo-kavach.png" alt=""> Explore the Apollo Kavach Program
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="fifth" >
-                        <!-- <p class="paraL"> -->
-                            <h4>Apollo 24|7 - Your Most Trusted Healthcare Brand</h4>
-                            <p>Apollo 24|7 is the largest multi-channel digital healthcare platform in India, 
-                                created with a vision of eliminating flexibility blockages from the healthcare industry. 
-                                We believe in making healthcare affordable to everyone by combining analytic excellence, 
-                                affordable cost, and extensive research with advanced technology. Apollo 24|7 is a single 
-                                online platform where you have access to a wide range of services such as online pharmacy, 
-                                <a class="parag" href="">online doctor consultations</a>, and diagnostic <a class="parag" href="">lab tests at home</a>. We also provide expert solutions        <!--add DOCTORS & LAB TEST page here-->
-                                for chronic conditions and COVID-care with a secured digital vault, where you can safely upload 
-                                all your medical reports. 
-                            </p>
-                            <h4>The Smart Choice for Your Health is Here</h4>
-                            <p>Make the best decision for your health by choosing Apollo 24|7. Here’s why you can count on us:</p>
-                                <ul class="fontt">
-                                    <li>36 years of legacy in the healthcare industry</li>
-                                    <li>24x7 availability of doctors</li>
-                                    <li>More than 3.5 million diagnostic tests each year</li>
-                                    <li>700+ collection centres and 100+ laboratories</li>
-                                    <li>High quality and affordable diagnostic solutions</li>
-                                    <li>Fast and accurate test report results</li>
-                                    <li>Several medical specialties under one roof</li>
-                                    <li>Online prescriptions - available anytime, anywhere</li>
-                                    <li>Order medicines and book tests online with ease</li>
-                                    <li>Digitised health queries</li>
-                                </ul>
-                                <h4>Ask a Doctor Online 24/7</h4>
-                                <p>Online doctor consultations take place through online doctor chat, call, or video call. 
-                                    This helps you to talk to doctors online from the comfort of your home by simply choosing 
-                                    a doctor from different specialties. Avail personalised solutions for any health problem with 
-                                    prompt online doctor consultation with Apollo 24|7.
-                                </p>
-                                <ul class="fontt">
-                                    <li>Safe and secure platform</li>
-                                    <li>Affordable rates</li>
-                                    <li>Video and chat options</li>
-                                </ul>
-                                <h4>Online Doctor Consultation - Now at Your Fingertips</h4>
-                                <p>The demand for doctors is expected to increase as new medicines allow people to live longer.
-                                    However, there are several ways to reach out to a doctor without the need to visit a hospital
-                                      or clinic, all thanks to technology. With the online facility available, doctor consultations
-                                     have become easier, and you can get the right health care. Online doctor consultations
-                                    with 4000+ top medical doctors are available at Apollo 24|7. Video call or chat with expert
-                                     doctors from 100+ medical specialties, including | <a class="parag" href="">Dermatology</a> | <a class="parag" href="">Gynaecology</a> | <a class="parag" href="">Paediatrics</a>      <!--in all "a" tag here add DOCTORS page-->
-                                     | <a class="parag" href="">Psychiatry</a> | <a class="parag" href="">General Physicians</a> | <a class="parag" href="">Gastroenterology</a> | <a class="parag" href="">Dietetics</a> | <a class="parag" href="">Ent Specialists</a> | and more,
-                                      in just 15 minutes.
-                                </p>
-                                <p>Benefits of choosing online doctor consultations:</p>
-                                <ul class="fontt">
-                                    <li>Save time, money, and effort.</li>
-                                    <li>No need to travel.</li>
-                                    <li>Most convenient option to choose from, and helps in early diagnosis.</li>
-                                    <li>Online doctor consultations are confidential and safe.</li>
-                                    <li>No risks of infections.</li>
-                                </ul>
-                                <h4>Apollo Hospitals</h4>
-                                <p>Apollo 24|7 is a part of Apollo Hospitals. 
-                                    <a class="parag" href="https://www.apollo247.com/hospitals-and-clinics" target="_blank">Apollo Hospitals</a> was established in 1983 by Dr. Prathap C Reddy.  <!--Hospital page added-->
-                                    It incorporates over 10,000 beds across 70 hospitals, over 4000 pharmacies,
-                                    172 primary care and diagnostic clinics, and 148 telemedicine facilities spread across 13 countries.
-                                    Apollo Hospitals has touched billions of lives by offering exceptional clinical outcomes.
-                                </p>
-                                <p>Milestones of Apollo Hospitals:</p>
-                                <ul class="fontt">
-                                    <li>36 Years of legacy and credibility in the healthcare industry.</li>
-                                    <li>NABL certified multi-channel digital healthcare platform.</li>
-                                    <li>World’s best medical specialists.</li>
-                                    <li>Largest & trusted branded healthcare network.</li>
-                                    <li>Advanced healthcare technology.</li>
-                                </ul>
-                                <h4>Pharmacy Simplified with Apollo 24|7</h4>
-                                <p>Apollo pharmacy is the most credible and established online pharmacy in India.
-                                    It delivers 100% original medicines and products. Apollo pharmacy is believed 
-                                    to offer super-fast home delivery for all the healthcare essentials.
-                                    Explore our broad range of medicines or over-the-counter medicines and products such as baby care, 
-                                    personal care, wellness, lifestyle, health, and nutrition categories online with ease. 
-                                </p>
-                                <p>Rapid deliveries of medicines are available online at Apollo Pharmacy. In some cities, deliveries are done in less than 24 hours.</p>
-                                <ul class="fontt">
-                                    <li>Get health credits on purchasing medicines and products.</li>
-                                    <li>Alluring deals on medicines and other products.</li>                                    <li>A broad range of medicines and essential healthcare products to choose from.</li>
-                                    <li>Prescriptions are uploaded directly.</li>
-                                    <li>Authentic and top-notch quality products.</li>
-                                </ul>
-                                <h4>Convenient Diagnostic Lab Tests at Home</h4>
-                                <p>Regular health check-ups are vital for a healthy life because it helps in detecting diseases at the earliest,
-                                    following a timely treatment. Apollo 24|7 provides blood sample testing at your doorstep conveniently.
-                                    You can book lab tests at home and utilise the home-collection facility.
-                                    We offer a broad range of diagnostic lab tests such as
-                                    | <a class="parag" href="">RT-PCR Test</a> | <a class="parag" href="">Renal Profile Test (KFT, RFT)</a> | <a class="parag" href="">Hemogram Test</a> | <a class="parag" href="">Lipid Profile Test</a> |    <!--here in all "a" tag add LAB TEST page-->
-                                    <a class="parag" href="">Thyroid Profile Test (T3 T4 TSH)</a> | <a class="parag" href="">D-Dimer Test</a> | <a class="parag" href="">Urine Culture Test</a> | <a class="parag" href="">Complete Blood Count Test (CBC Test)</a>
-                                    | <a class="parag" href="">Widal Test</a> | <a class="parag" href="">Liver Function Test (LFT)</a> | and more.
-                                </p>
-                                <p>Top-notch quality diagnostics are critical for the best treatment and personalised patient care.</p>
-                                <p>Here are some simple steps to book a lab test:</p>
-                                <ul class="fontt">
-                                    <li>Book online - Select the package or test you want to book.</li>
-                                    <li>Choose home-sample collection option - A qualified phlebotomist visits your home for sample collection at the selected slot time.</li>
-                                    <li>Get fast and accurate blood test reports - download them from the app or website anytime, anywhere!</li>
-                                </ul>
-                                <h4>Find Pathology Labs with Ease at Apollo 24|7</h4>
-                                <p>Manage your health with prompt health check-ups from Apollo 24|7.
-                                    We offer an extensive range of laboratory services that deliver 
-                                    factual diagnostic lab test results. You will find the most trusted pathology labs here at Apollo 24|7.
-                                </p>
-                                <h4>Other Services Offered by Apollo 24|7</h4>
-                                <h4>Apollo Circle Membership: Premium Healthcare Program</h4>
-                                <p>Apollo 24/7 Circle is an elite membership plan for those who put their 
-                                    overall health and well-being on priority. This membership plan guarantees 
-                                    priority access to Apollo’s best doctors, personalised care, unique deals, 
-                                    and comprehensive wellness programs especially curated by professionals. 
-                                </p>
-                                <h4>Apollo Prohealth Program </h4>
-                                <p> <a class="parag" href="">Apollo ProHealth Program</a> is an exclusive end-to-end personalised proactive
-                                    healthcare management program that combines predictive risk assessments 
-                                    and top-notch quality diagnostics with accurate physician checks.
-                                    Approximately 22 million health checks have been done based on this program. 
-                                    You can count on us for:
-                                </p>
-                                <ul class="fontt">
-                                    <li>Customised health risk assessments: diagnostic tests designed exclusively for your profile to foresee the health risks.</li>
-                                    <li>Physician-led assessment: designed for customised treatment plans and overall wellness goals.</li>
-                                    <li>Multi-organ assessment: diagnostic tests designed as per your profile with consultations from top specialists and physicians.</li>
-                                    <li>Health instructors: to evaluate your health parameters regularly and help you stay on your path to health and wellness.</li>
-                                </ul>
-                                <h4>Health Queries</h4>
-                                <p>Have questions about your health? Find answers to all your <a class="parag" href="">health queries</a> regarding sexual health,
-                                    gastroenterological disorders, gynaecological issues, dermatological problems, cardiological diseases,
-                                    and more from proficient doctors and accredited experts by using the Apollo 24|7 app and website.
-                                </p>      
-                        <!-- </p> -->
-                    </div>    
-                    <div id="sixth" >
-                        <center><img style="width: 9%;" src="https://newassets.apollo247.com/images/ic_logo.png" alt=""></center>
-                        <div id="top">
-                            <div class="top1">
-                                <h4>About Apollo 247</h4>
-                                <div class="t1">
-                                    <div class="box">
-                                        <a href="aboutus.html"><ul><li>About Us</li></ul></a>
-                                        <a href=""> <ul><li>Contact Us / Grievance</li></ul></a>
-                                        <a href=""><ul><li>FAQs</li></ul></a>
-                                        <a href=""><ul><li>Health Queries</li></ul></a>
-                                        <a href=""><ul><li>Terms and Conditions</li></ul></a>
-                                        <a href=""><ul><li>Returns Policy</li></ul></a>
-                                        <a href=""><ul><li>Refund Policy</li></ul></a>
-                                        <a href=""><ul><li>Privacy Policy</li></ul></a>
-                                    </div>
-                                    <div class="box">
-                                        <a href=""><ul><li>Apollo 247 Android App</li></ul></a>
-                                        <a href=""><ul><li>Apollo 247 iOS App</li></ul></a>
-                                        <a href=""><ul><li>Apollo 247 Sitemap</li></ul></a>
-                                        <a href=""><ul><li>Online Doctor App</li></ul></a>  
-                                        <a href=""><ul><li>Online Medicine App</li></ul></a>
-                                        <a href=""><ul><li>Apollo Pharmacy</li></ul></a>
-                                    </div>
-                                    <div class="box">
-                                        <a href=""><ul><li>Hospitals And Clinics</li></ul></a>
-                                        <a href=""><ul><li>Blogs</li></ul></a>     
-                                    </div>                 
-                                </div>
-                            </div>
-                            <div class="top1">
-                                <h4>Services</h4>
-                                <div class="t1">
-                                    <div class="box">
-                                        <a href=""><ul><li>Online Doctor Consultation</li></ul></a>
-                                        <a href=""><ul><li>Apollo Circle Membership</li></ul></a>
-                                        <a href=""><ul><li>Online Medicines</li></ul></a>
-                                        <a href=""><ul><li>Project Kavach</li></ul></a>
-                                        <a href=""><ul><li>Cough Scanner</li></ul></a>
-                                        <a href=""><ul><li>Covid Vaccine Tracker</li></ul></a>
-                                    </div>
-                                    <div class="box">
-                                        <a href=""><ul><li>Covid Vaccine Update</li></ul></a>
-                                        <a href=""><ul><li>Apollo Pro Health Program</li></ul></a>
-                                        <a href=""><ul><li>Doctors by Specialty</li></ul></a>
-                                        <a href=""><ul><li>Doctors by City</li></ul></a>
-                                        <a href=""><ul><li>All Doctors List</li></ul></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="top1">
-                                <h4>Top Specialties</h4>
-                                <div class="t1">
-                                    <div class="box">
-                                        <a href=""> <ul><li>Covid Consultation</li></ul></a>
-                                        <a href=""><ul><li>Consult Physicians</li></ul></a>
-                                        <a href=""> <ul><li>Consult Dermatologists</li></ul></a>
-                                        <a href=""><ul><li>Consult Paediatricians</li></ul></a>
-                                        <a href=""><ul><li>Consult Gynaecologists</li></ul></a>
-                                        <a href=""><ul><li>Consult Gastroenterologists</li></ul></a>
-                                    </div>
-                                    <div class="box">
-                                        <a href=""><ul><li>Consult Cardiologists</li></ul></a>
-                                        <a href=""> <ul><li>Consult Dietitians</li></ul></a>
-                                        <a href=""><ul><li>Consult ENT Specialists</li></ul></a>
-                                        <a href=""><ul><li>Consult Geriatricians</li></ul></a>
-                                        <a href=""> <ul><li>Consult Diabetologists</li></ul></a> 
-                                    </div>                       
-                                </div>
-                            </div>
-                            <div class="top1">
-                                <h4>Book Lab Tests at Home</h4>
-                                <div class="t1">
-                                    <div class="box">
-                                        <a href=""><ul><li>RT PCR Test At Home</li></ul></a>
-                                        <a href=""><ul><li>Book Lab Tests at Home</li></ul></a>
-                                        <a href=""> <ul><li>Renal Profile (KFT, RFT Test)</li></ul> </a>
-                                        <a href=""><ul><li>Hemogram Test</li></ul></a>
-                                        <a href=""> <ul><li>Lipid Profile Test</li></ul></a>
-                                        
-                                    </div>
-                                    <div class="box">
-                                        <a href=""><ul><li>Thyroid Profile Test (T3 T4 Tsh Test)</li></ul></a>
-                                        <a href=""><ul><li>D Dimer Test</li></ul></a>
-                                        <a href=""> <ul><li>Urine Culture Test</li></ul></a>
-                                        <a href=""><ul><li>Complete Blood Count (CBC Test)</li></ul></a>
-                                        <a href=""><ul><li>Widal Test</li></ul></a>   
-                                    </div>
-                                    <div class="box">
-                                        <a href=""><ul><li>Liver Function Test (LFT Test)</li></ul></a> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="top1">
-                                <h4>Product Categories</h4>
-                                <div class="t1">
-                                    <div class="box">
-                                        <a href=""><ul><li>View All Brands</li></ul></a>
-                                        <a href=""><ul><li>Health Care</li></ul></a>
-                                        <a href=""><ul><li>Personal Care</li></ul></a>
-                                        <a href=""> <ul><li>Baby Care</li></ul></a>
-                                        <a href=""><ul><li>Nutrition</li></ul> </a>
-                                        <a href=""> <ul><li>Healthcare Devices</li></ul></a>
-                                        <a href=""> <ul><li>Beauty Skin Care</li></ul> </a>
-                                        <a href=""><ul><li>Immunity Boosters</li></ul></a>
-                                    </div>
-                                    <div class="box">
-                                        <a href=""><ul><li>Coronavirus Prevention</li></ul></a>
-                                        <a href=""><ul><li>Diabetes Care</li></ul></a>
-                                        <a href=""> <ul><li>Patanjali Coronil Kit</li></ul></a>
-                                        <a href=""> <ul><li>Mamaearth Products</li></ul> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="top1">
-                                <h4>Top Hospitals</h4>
-                                <div class="t1">
-                                    <div class="box">
-                                        <a href=""><ul><li>Apollo Hospital Jubilee Hills</li></ul></a>
-                                        <a href=""> <ul><li>Apollo Hospitals Greams Road</li></ul></a>
-                                        <a href=""><ul><li>Indraprastha Apollo Hospital</li></ul></a>
-                                        <a href=""><ul><li>Apollo Hospitals Bannerghatta Road</li></ul></a>  
-                                    </div>
-                                    <div class="box">
-                                        <a href=""><ul><li>Apollo Hopsital - Belapur, Navi Mumbai</li></ul></a>
-                                        <a href=""><ul><li>Apollo Hospitals Canal Circular Road</li></ul> </a> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                
+    <div id="container">
+        <!-- head nav for all pages -->
+        <div id="head" >
+            <div class="headL">
+                <img src="/COSMOS APP/Cosmoslogo.jpg"/>
             </div>
-            <div id="help">
-                <a href=""><img class="help" src="https://newassets.apollo247.com/images/ic-mascot.png" alt=""></a>
+            <div  class="headR" >
+                <button onclick="window.location.href='doctors.html'" class="navL">
+                    <h5>DOCTORS</h5>
+                    <p>Consult <br> Online</p>
+                </button>
+                <button onclick="window.location.href='pharmacy.html'" class="navL" style="width: 100px;">
+                   <h5>PHARMACY</h5>
+                   <p>Medicines & other product</p>
+                </button>
+                <button onclick="window.location.href='labtests.html'" class="navL">
+                   <h5>LAB TEST</h5>
+                   <p>Health<br>check-ups</p>
+                </button>
+                <button class="navL">
+                   <h5>COVID-19</h5>
+                   <p>Latest<br>updates</p>
+                </button>
+                <button onclick="window.location.href='cart.html'" class="navIMG">
+                    <img class="navlogo" src="https://thumbs.dreamstime.com/b/high-quality-dark-blue-shopping-cart-icon-high-quality-dark-blue-shopping-cart-icon-pictogram-icon-set-illustration-useful-web-192534364.jpg"/>
+                </button>
+                <button onclick="window.location.href='signup.html'" class="navIMG">
+                    <img class="navlogo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAzFBMVEUEU33////v7u7u7e3z8vL6+vr19fXy8fH8/Pz4+PgAUn0ATnoAQ3EAS3cAUHsAP2oAQG+KlqEAN2hreowARnIAPW3S1dqyvMFQaYEAR3EAQ3Pd4ueztbmPmqfm5+mdpq++wsYwV3NLaIUZSWx6iJVvg5Slq7GFlafi4d/Nz9BfcIUATXRgeIqCmq0AQWgNRmlBXXgsUHCRo7Nhgp0zXX4ANGkoVG81X3qYoalVc4zY2tsoU3YAOGSltMFleY8zY4QAKmEAH1hLYntzjaQZQbPyAAAUwUlEQVR4nO1dC3fiNtNG2JbluzG2IQHM/ZawBPpusgm5tN3+///02eC7hW8SkNOvc9qertd49HhkzWg0etQAgXBM8yQMF15rBsKHl2B4GwqvhZdgeIkNfsncWkHj1g34D+F/CP9DeF2EgfxbEYLoB/8WhAzTZKF7SRAYp9ez+/2WL4t+3+71HEbgEISQd616FYQI9/f+NaZ6A9xr3g2rzuey3R4/Wfe6rsuyKZuKKbv/q99bT+N2eznsrNzbUJOto6AcQs4XJLCBCCi4Fl6C4SUYXuP8a4jL3Oa2GTH2YvZL0zRFkSRRbGRFFCVJUTRN/zVb2Me2l1cQvy28hEfQCD//+FsMJGbgQITwGh9caoaXBO9P7oOY9Y/2znDthYWWBupa9Xn38GPNeH2vWMFJYgbOR9AIPzVcP4khDC7FGhD+NGpAU+Bc271sDVNSxRLwApANVTUN7cW1JYdyFeR04TiC2EeKRZj9iEsiBNx6PnmUpbLQUkAV+XEyP1wDYU0bcuvBi1GmY+aAdE35Mlhz39KGzOvkyZQI0AUiuZYcNr+dDe3Zs66SWC8uoig/zW3XhzCRghvakGERHHXvFFrwTqKa0+6IR77Xu6UN3SGaH75blPF5IirW+5A/eXYihGT+sAmc4dZUqcPzQZra0PECqxjC6v4wiGk4AQYihNfCSxB/GxCGe52++SKIqr4fCgDXjqKmhbfF41LM5Ca4xGNeDwJoNJYviO8EUh6PEAwaEo9LMx0NNz1jmNpzC1fZ6ktTLozPE0X7sn2115w98Rwzf64Zu1QVUXqeMxx/XYQsWuzvrgLvhPFuv0DsFREyoPdmXcd+IUbjoQeYKyFkIFpMr/EBJkWZLhC8CsImWnWvbMCTiFZ3FTbjggg5MHq/vgFPoryPSBCW9Idoqd3CgCcRtUEQy/Cl/WFoJkxUF0VLyL+AnK51M3yefHSdU1uiqC1sLcQiCBEyZSJvtB6bNwXo9VTbi7VxiTg8ggqzJ4aFfYPGFJdMJKMPWeYS80P3FQ3M232CkagfAzcqpT8/ZCDc3MRJYMTaQEjfhpDZXTFMK5C7XWw5hJIN4ernrceYuJh/rigjBN8LoAvx56oqwnxvsfp5+0E0KVIIschb8IFAFAgMr/kXviHAE8Rj6woQlIna4HcEeIQIqWQxmG82yERiehDJ5xaum/imAL0R1W0dMUIW7r4rQBfizg3gSBGCzfdx9Fm52wCWECF8ve1sqUisASRDiPrfItg+L6LZJ0KI1s/fG6A703helUWI84fOmOKii/uuVMUTqfwKfwlRx06IEOsPo9WMSIIlD9SlNoyKimUZ2r49m83aXc2wKK7HKV3EnUHgXctbXUMDnUoTREV+mrQWB3ia1SGOZdaL1uRJpoRSX56Cr6rVJgw3ojLKiPp282kfw9tQQRMiAdmfm61O5SvQRsc8UtUZMFy9UwAo3U+WDBLYZOjf9FboWQE5i+49ecgrKu8HWA2h90IY1CVP/ErP3Q4bLMZnG+CCRh0aCXR57s2hKiIEC3JXr09GsXTmuTTJ54T8czcWoGovZXtT0lcraQMvVV4wBXeFH2ikXVWd9limkg159EDaR83u+vi0YoQArLuEg5qoPCC+ig3dcdQgwyd+zPyqjTIIgTAj7anGiKtSbQKdPdk7VeVh8LQchxub24EhoeMQ97Hl04Q/DHMbXJjbEBCYk02ZRHOBUrmepIJAohwLGBGuaZlzgFWAr4J2nomUqX/ZIJuvy1ug9Jbv7L/IrPjMhHUihXML1CYa29S7Ua39FvYdEUTzgcUpwCEk7DCi0am5o6RD1nW0ka+iCGETjEk8hfsNgrp7ZhZ3JK9WGQulbMiABVEpl7lBtRGiDdF0zR3AmRIIWTJPob4fB+2a+57gO8mnqO4dthgh43omAiWi1gEECEGHaAjQT0bMR8jyW6I+ujw9rfSWlhRCMCcZA1SNZ3MQnlTBIcmnoE59RKENm2kFrmAQhgGPMyXop6I5RGkFmaiN6xL4QtF89dNBpUt4fQnzYNwryTgndYW0gkzkPSKp+RWnzMl45QsJQoRBdxWIUgv6KK0gg5BoZq+3fED1ETJoSDL1VrpFCInCGXHqBFsU6iPkGBJvJWqjAoQzknFGagejSQHC/O0OS5JuZA7zETJ/kXwE2iHMMdW3oQDWRP3oLyYXYZ/kG1Dl0CEQ2RB8kLxmq5+LcELy9uRWNCsksSFokTgMcZKXxbCn9Z/caNzb0epObX/oIbTvSZoxtZP+EMYWMcBAJniyuHc4zDoPzF7DXIqvpXBksb88AHEFiSwG90Iyt1cfYOUtLfhNOfCBZIYhvQjnqk2ENVEKUZojSqwRaE6URTHWIKYgjpAbEGWB5aFACaFANIFrmIMzCJvMjig9o3eoIewQrZkosdrMBELWfiTKWBrrOhs+cAgh2efSeLTxCMGCZCR1Xe2KGsIVWdLtfoFFiADRSNoQLcBTQshzRA6xoWywCAFDlL5wESJqDDzAIMoNixoeIWHnb9wjvsYWT5w/ZDjC1dnIX7j+MKII+UFWWqIaIMYuwoVrIzFekrDANVIaLtvEeEkQAoQIzR8oVBBVQRMuVrgvjs3dTF5qU84p8gYs2UjjhVehgmhuwewIKz+MVZ3t8liEK8IPRt2FCfwIIW+T1kQYo9IIi2xIugLdsGyYRsggstWKagiLbEi8xi4v/BWMGEKwIa2AcsNBWjZcEtbTieYMg/AXcXXJPObyyGxINrdwRf0F0r2URxrhQxvi2KGE0BmTvm314xRzxBDCFfHmV3F7QHR66YEsuvLaoq1ggNCPKWDng/Ch7vSpTylP0ydnE/nowCBPE6j4JOfwkF7CBuOiNlwRMjZqA8Sd1B1MPwMFIUKiRLP/WC1aSiOIvPkm8ZDgTi+WgYIAoUAas3kIo0IoEoRoSIESRmoLF0DYkLrh5IIAIUuygnkeIUPe9xtesESOENg09rCIYyaF0CHL0fhihpNrAoRkFSe+iI9OCmGPNNY9PVcLjFgfoU2HlcLopRGSZUYCUb4QIUL0RYdX5D6N0KaztcKbYJwQlqw2CeZxIULiiZMvuu0r8NnM3DCCzoPF9xNjapZAlYsRqIa0sFGKw29Hk8YWCE/0PkgwtKJXslxpJOaMI4jaENEqe1z8EDKIvBnQooWw8dwHtSNv8EmpjzYap+XaiyBU9we25uyJPZAURCXlgggb0tgpoh7B25B1xvR2xV8SoesyeJ7LRYi1Ic9TchRHuSjChv4WMWSWRsgKb5TG86NcFmFD/1+zKkK2+UUTYEO5LMKG/MDkIcx+h6D5QLkFIULfL1FG2FB2AWt1OX9oTynT2HoImRhDK1hQ7SINjwRwCFAJAlV43Ds7nNLmFtEXIMnQSitqi0TUuz2OL6Kt8FI03KFLn8hW7/s96HII3QBuu4CoMPJGcHF3AZpCHyH9uUVCRGs74nIR8giOthehEAvmFrTnh2lR7yYLmIdwMaGznTsjVmYGTC3kTYlqPc1Gx2HUjfWTCNnR7MmiSa8QlwxCOnkarKjK9ues70AOIfY4dLLIHWWd/uznVrkUE3hDfErnaejk2s6pE01Ln7Znf3RGnY777x/D9tS0zEuZ76gyk2ujki/NVakqiqmpkiSpmmkq1E4ZOCPZfCl3aYRHEWP/vaxIbS7wh/74hiisW3wnUZbID3zD9UMaiwXfSJQhTCMkXz/8VqJ1MgjJ14C/k8TXgH2EFNbxv5OIGuJTCJvCr4t53xuI8gtTbTL75rxllQRbT0NcE1VCPLqva/hDUV6gDEJoX4w9UBRVydR1y7g3LMv7595y5Xhu2aVUWjYfJIJChlaWuDYRL5J8/7iffM0Wi/XKOa3XwOa63+/Pvib7R1m+SPim7hg2y9BKtlEFJ24oamgvrx17dcqAC8Go5s+e0Mr+HL5oBv0gVWoHOff4nhlAWCOc0SI/vi3Xqyi9j5sBQxfm+sfbo0w3KtZ/BAqo1nnHRdWf9wMbIgEWZqKggJr2YP9MMxkV1Xkna/WpRTWm1X1dgbB2Lg9hmCxeDboWrU50plafI9xvETxdVD42I+gd0dQsjfC4yg1Hmw+Fiis5s9+CAwsK2ShRni69/EE91ghnqdHwyjJ+zwzH2qRFj679tq1TfqRuLUavtSU7I9JrxvbMvicGkuwC9sT8WAarFfXraXptjZS8bcLGFMT3kBKyeYofm+gM0fp7SDnhsCE7jU+P7T+MM7S6o/aBwF+I5raDQGz/bd19wFAAqKORzOWMAzrL0Fp/NJW0JVPreMKwB8VqhN0fLbXaX6P0ksNtMqy5iugZ0GsYrd0IrnSmdb9GeZjDOHCotx9fNDen5tPaUXL8kuvWKE4P1DkV1L8//bGDog3dIWdQi4Qvw6mQRFiHF0MZh0MoTRu6Yu9qJHELeDGYp8qvLVqxp42QFw7VIapP+dwmYFC181tvsT3qVHsp4L0am6qd6rgZPw+hXZHXz2qxLNFxvXkI3d+wrYoQjzvVcxlaq/FEaS33TRMd1xsiTPjDoxzLGMCskvP3eaLi/jBFoIoqcX3pr8A7zaaZOcsGsCFbKshhaI04VdnwtvAUnObpFvBaJZa0Rh7rKxdTkGZoZYQKux30VrIjJo7rzXTEovlhaOB0T2+Vhyh1vQ8ln1WwPOeeqL2mPjVq+/FT3/Jr6XhZ+4RpBQS8ifI/wU8vjRB8lRxuRDOXNzHIOpSkTjG/wp9eHCFbsvJUHx6/NTr8pdLeCX96aYTIbVOZ0UHcO1kFGA5aoVMiV6LGAF7ehgwsRYn50RHKIGw2UTGPsGh1UNapXw5hE3WKa8OUMcIowPF5lyBPlF85HDFEbW9RiNBj/Sx664Vc0KE2Dn0V9Hplx/HRebUo/CXGhvkMrXxwCXdWb0IBBEVRuPQAswowDK2ejiKOH/Hd+wjDM4cvGbXFFDgFG4aiY5GKz5lpgnmu2zcWifd/wcg7oWCR6/jNOcAqwJ9vAZm892V2sQ2ogLDk7CmtIG9WkDwboQhh/vkW6vuBFGE9G4JDzrkp58+3wNow94wS648zDbg4QnA+Za28VTqjhMk7Z0Z6P9uAiyME5yjbxXeGr3LOzPGhZ84KCkjXb4PwHGW7VfGsoGP0CuZYF6u85TTg4gg5/GBzKp+pcs6MJ/CAG09FI1y5urg/xCgAIwPXqPfjqbJnzl07v3ACRphyReULleRZrc/QmvdL7FbvjxE4ryD3/MM/Mp+iG/uF7wdjJkoMrXkKMDFzMLjXOA84e/6h0o1SK1edW0QKMl+i6Rc81zqlM7Nt1bLziJKugjBNmyHFzrCsjjC9Zio9cLm0etdAyD0k3rro00PURJg+S1b97eRRdl8FYe93wut/kJ0l6z5ykOgUSgTxRgidfeI7tF4JzwN2vWjyTGfpae0755sgBIdtoo+aG1CkoAghw8JdIrZR3/0Tx26AkEH2exJgpXO5cVRcnruCzCThM9S/+6hJyx+Gl3D+EKRuc0eFvxPfoLlHbKGCiKEVQ6DK+6ssfyYhKgOQoF6NeFZxDK18oYIsQ2uK29VXAAZqEuCEAcUKIobWnCm48zMBUbQ2nrH4oO+Ui7yrMLSeJKUAbpKe0PzplFFw/jzgeANWSYiNu5+rq88tVj+ThejKn6tSCsohBKtkR22Y006UEr0Kws401YKfq3IKzp94nGhAxoqitmyiWAMujJBfpgJuc+KUVFDShgg6k9SE2Dvs1zdjZYQVc22gN0ktpZh7JldBdRsi12nsUhsyJH0AhSvYUHBaHylKibtd9HxaNnR9nTuWJfSIqrkbHdm6LmhDdxwd7dIZNmsusKVfYWmE3mCcLrYRRWPOIP6CCFnEzNN5C/HjFVQgMTqfp0lEFaeAB/aN9JKNPF6AeMVQzvy8ep6mCcFgnM6HSUYfVlFQHLUlgqpeZmlRtHZrIXhibtRWmqE1+uVomql9Ucan+SCfVVAji4EJjJ1uJu2sbDdrdNpbQTPyZtF6s82s8lldp6KCqggBWmrpvLOofDysOaHJUEQocOuH9AjqUTz/gaoqqIyQQ6NpdulN2b6tIaJ0ggfDs3D9ts2mDc3pqLqCygghwzmt7Jq6aGq7zwggEY8wEDo7LWM/UTVaTg0FNRAyLLd4z75gUdLeW73gt/URcr3Wu4lZZVf2C65OJ6mB0Hso84DNruv37c7p1rqVCnynLeNqB0XjwdVa50OvhdDb3D7aYxfCJU1767idSQgnd6UUnLyF0+maGrZIwtyPvO3nZAgR7u+ZeANiCBmeWw2eJdzLbkj3+/nnKqi9KOSJ8iKzpuvm2c/5/h7L6CJKz3OG815ZjXKWgKEVT6Aa8azC7G3I7arZ8eAoqvRhbNv9A484AfNLNsFmJnCgeei3t8aHhF/+FLWHFYDpdkQUsLkKQobWWkEVZEfjswViqqk//v5nOXIHBwQEjuebiUKCY9Gs+zdgtV7+8/tRP7vTSZR/jYjCwvKRt38pkUbhuNH+fE2xKEqy8Xz3MlsMO7Z9cMKuLrDOwbY7w8Xs5c4wZOn8BiBRdz9Ajmh6Vnp+iEHoJX8EZyjhxvaghV7EY8qy8ridjn+/vf3Pk7e33+Pp9lGRZdPr5efrKyRNGjpC2VQX8ewJh/CY4OI/u3pxqZ8nqsekZEoe1YBYvHFLsbqf/ClTcjsbnjBCbtR9LL1lsFwFsmo+dkcCrJsmoWjDoAH24IkidZ5oPQ3sSOmNbRg0gOlPplSIAyR5OukzWQU3tuFR7MGLIRPtUxZF5fllYJ9TUAshgT8MLsWKQYR1a7eVa5Ktioq83bUOeQrq+MMSBKqelL3NVWgvNpphqmqjtDU92hpJN7TNwmYAyurEtaN002rGpfh+EoWN6x8PuzvZFBti4dgpuuOmfLdr/1hXURDGpQUUsNXzNGUbgKBny1+a9iErEj5ocUMeSVE0Tf81c22HKiq49OypTAO8Pwirzuey3R4/Gpauy4Housc49Dhut5fDzgoJAGHHuW+P0EtFNr3jZQWBcXo9u//a8mXR79u9nsMInPfR8e6N9RTcHGGqASC21nARBTdHiK1r+5chvImC/08IS61bFBZHhg3Ii4tqVpskFJRftwjfIoW49NL7LWopuB7CGtUmVBT8H6r+5WVuW4ZoAAAAAElFTkSuQmCC"/>
+                </button>
             </div>
-
-            <footer class="footer">
-                <div class="inner-footer">
-                    <div class="footer-links">
-                        <ul>
-                            <li class="footer-items"><a href="#"><i class="fa-solid fa-house"></i><p>HOME</p></a></li>
-                            <li class="footer-items"><a href=""><i class="fa-solid fa-user-doctor"></i><p>DOCTORS</p></a></li>  <!--add doctors-->
-                            <li class="footer-items"><a href=""><i class="fa-solid fa-pills"></i><p>PHARMACY</p></a></li>        <!--add pharmacy-->
-                            <li class="footer-items"><a href=""><i class="fa-solid fa-microscope"></i><p>LAB TEST</p></a></li>    <!--add lab test-->
-                            <li class="footer-items"><a href=""><i class="fa-solid fa-virus-covid"></i><p>COVID-19</p></a></li>    <!--add covid-19-->
-                        </ul>
+        </div>
+        <!-- dummy for filling the head background block -->
+        <div id="dummy"></div>
+        <!-- 2nd box -->
+        <div class="container">
+            <div id="box1">
+                <div class="box1L" style="background-image: url('https://www.transess.com/wp-content/uploads/health-banner-4.jpg');">
+                    <div style="font-size:30px;"><h1 style="color:rgb(2,71,91);margin-left: 33px;">Welcome to Cosmos MedApp!</h1></div>
+                    <div><h2 style="color: rgb(11, 95, 124);margin-left: 33px;">Always here to help you!</h2></div>
+                    <div onclick="window.location.href='doctors.html'" style="display: flex; width: 40%;margin:5px 40px;border-radius: 10px;background-color:rgb(2,71,91);">
+                        <div style="margin: auto;"><img src="https://newassets.apollo247.com/images/ic-doctor.svg"/></div>
+                        <div style="margin: auto;color: white;"><p>Book Appointment with Doctors</p></div>
+                        <div style="margin: auto;"><img src="https://newassets.apollo247.com/images/ic_arrow_right_white.svg"/></div>
                     </div>
+                    <div onclick="window.location.href='pharmacy.html'" style="display: flex; width: 40%;margin:5px 40px; border-radius: 10px;background-color:rgb(2,71,91)">
+                       <div style="margin: auto;"><img style="max-width:50px;" src="https://newassets.apollo247.com/images/ic_medicines.png"/></div>
+                       <div style="margin: auto;color: white;"><p>Buy Medicines and Essentials</p></div>
+                       <div style="margin: auto;"><img src="https://newassets.apollo247.com/images/ic_arrow_right_white.svg"/></div>
+                    </div>
+                    <div onclick="window.location.href='labtests.html'"  style="height: 45px;display: flex;flex-wrap: wrap;">
+                       <div style="width: 15%;height: 45px;margin-left: 40px;flex-wrap: wrap;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; ;border-radius: 10px ;background-color: white;display: flex;">
+                           <div><img src="https://newassets.apollo247.com/images/ic_home_test.svg"/></div>
+                           <div><p style="color:rgb(27, 117, 142) ;margin-left: 10px;">Book Lab Tests</p></div>
+                       </div>
+                       <div style="width: 15%;height: 45px;flex-wrap: wrap; margin-left: 15px;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;border-radius: 10px ;background-color: white;display: flex;">
+                           <div><img src="https://newassets.apollo247.com/images/ic-prescription.svg"/></div>
+                           <div><p style="color: rgb(26, 113, 136); margin-left: 10px;">View Health Records</p></div>
+                       </div>
+                   </div>
                 </div>
-            </footer>
-        </form>
+        </div>
+        <!-- 3rd box -->
+        <div id="box3">
+            <!-- <div class="flex">
+                <img class="arrowL" style="margin-left:50px;"  src="https://newassets.apollo247.com/images/hdfc/arrow-left.svg"/>
+            </div> -->
+            <div class="flex" style="margin-top: 15px">
+                <img class="ad" src="/COSMOS APP/homeheader.jpg"/>
+            </div>
+
+            <div class="dot">
+                <div style="margin-left: 80px;"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div style="background-color: rgb(5, 59, 74); width:15px; border-radius: 10px;"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <!-- 4th box -->
+        <div id="box4">
+            <div class="customer">
+                <div style="color: rgb(24,180,159);font-size: 15px;margin-left: 20px;margin-top: 10px;" ><h3>For COVID-19 Vaccination related queries</h3></div>
+                <div class="query"><h3>FAQs & Articles</h3></div>
+                <div class="query"><h3>Vaccination</h3></div>
+                <div class="query"><h3>Chat with us</h3></div>
+                <div class="query"><h3>See nearby Clinics</h3></div>
+            </div>
+        </div>
+        
+        <!-- 6th box -->
+        <div id="box6" style="margin-top: -20px;">
+            <div class="article">
+                <div class="article1">
+                    <h3 style="margin-top:-20px ; color:rgb(7, 22, 19) ;" >HEALTH ARTICLE & RESOURCES</h3>
+                    <p>Make better health choices with our curated blogs, videos and expert advice</p>
+                </div>
+                <div class="article2" style="border-radius: 0%;">
+                    <div class="art2" style="height: 50%; width: 60%;">
+                         <h4 style="margin-top:-1px ; color:rgb(11, 54, 48) ;">HEALTH BLOG</h4>
+                         <p style="margin-top:-7px; color: rgb(42, 40, 40);">Explore healthcare content created every day.</p>
+                    </div>
+                    <div class="art2" style="height: 40%; width: 20%;margin-left: 120px; border-radius: 10px;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                          <p style="text-align: center;color:rgb(252,170,109);;">Read the Latest Articles</p>
+                    </div>
+                    <p style="margin-top: -2px;text-align: center; color: rgb(255, 255, 255);">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                </div>
+                <div style="background-color: rgb(255, 255, 255);margin-top: -20px;">
+                    <p style="color:rgb(2,71,91);margin:20px;margin-left:120px;font-size:15px;"><h2>You can also</h2></p>
+                    <div class="art3"><p style="color:rgb(2,71,91);text-align:center;font-size:15px;font-weight: bold;">Take a Mental health Scan</p></div>
+                    <div class="art3"><p style="color:rgb(2,71,91);text-align:center;font-size:15px;font-weight: bold;">Explore HealthyLife</p></div>
+                </div>
+            </div>
+        </div>
+        <!-- 7th box -->
+        <div id="box7">
+            <div id="content" style="height: 140px;">
+                <h3 class="heading"> Your Trusted E-Healthcare Brand</h3>
+                <p class="para">COSMOS is the a multi-channel digital healthcare platform, created with a vision of eliminating flexibility blockages from the healthcare industry. We believe in making healthcare affordable to everyone by combining analytic excellence, affordable cost, and extensive research with advanced technology. COSMOS is a single online platform where you have access to a wide range of services such as online pharmacy, online doctor consultations, and diagnostic lab tests at home. We also provide expert solutions for chronic conditions with a secured digital vault, where you can safely upload all your medical reports. </p>
+            </div>
+            <div id="content" style="height: 250px;">
+                <h3 class="heading">The Smart Choice for Your Health is Here</h3>
+                <p class="para">Make the best decision for your health by choosing us. Here is why you can count on us:</p>
+                <table>
+                        <ul>
+                            <li style="color:rgb(159, 224, 241);"><p class="para paraMargin">24x7 availability of doctors</p></li>
+                            <li style="color:rgb(159, 224, 241);"><p class="para paraMargin">High quality and affordable diagnostic solutions </p></li>
+                            <li style="color:rgb(159, 224, 241);"><p class="para paraMargin">Fast and accurate test report results</p></li>
+                            <li style="color:rgb(159, 224, 241);"><p class="para paraMargin">Online prescriptions - available anytime, anywhere</p></li>
+                            <li style="color:rgb(159, 224, 241);"><p class="para paraMargin">Order medicines and book tests online with ease</p></li>
+                            <li style="color:rgb(159, 224, 241);"><p class="para paraMargin">Digitised health queries</p></li>
+                        </ul>
+                </table>
+            </div>
+            <div id="content" style="height: 140px;">
+                <h3 class="heading">Ask a Doctor Online </h3>
+                <p class="para">Online doctor consultations take place through online doctor chat, call, or video call. This helps you to talk to doctors online from the comfort of your home by simply choosing a doctor from different specialties. Avail personalised solutions for any health problem with prompt online doctor consultation with Apollo 24|7. Safe and secure platform</p>
+                <table>
+                    <ul>
+                        <li style="color:rgb(159, 224, 241);"><p class="para paraMargin">Safe and secure platform</p></li>
+                        <li style="color:rgb(159, 224, 241);"><p class="para paraMargin">Affordable rates</p></li>
+                        <li style="color:rgb(159, 224, 241);"><p class="para paraMargin">Video and chat options</p></li>
+                    </ul>
+                </table>
+            </div>
+            <div id="content" style="height: 280px;">
+                <h3 class="heading">Online Doctor Consultation - Now at Your Fingertips</h3>
+                <p class="para">The demand for doctors is expected to increase as new medicines allow people to live longer. However, there are several ways to reach out to a doctor without the need to visit a hospital or clinic, all thanks to technology. With the online facility available, doctor consultations have become easier, and you can get the right health care.Video call or chat with expert doctors from 100+ medical specialties, including | Dermatology | Gynaecology | Paediatrics | Psychiatry | General Physicians | Gastroenterology | Dietetics | Ent Specialists | and more, in just 15 minutes.</p>
+                <p class="para">Benefits of choosing online doctor consultations:</p>
+                <table>
+                    <ul>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Save time, money, and effort.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">No need to travel. </p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Most convenient option to choose from, and helps in early diagnosis.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Online doctor consultations are confidential and safe.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">No risks of infections.</p></li>
+                    </ul>
+                </table>
+            </div>
+            <div id="content" style="height: 260px;">
+                <h3 class="heading">Pharmacy Simplified </h3>
+                <table>
+                    <ul>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Get health credits on purchasing medicines and products.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Alluring deals on medicines and other products.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">A broad range of medicines and essential healthcare products to choose from.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Prescriptions are uploaded directly.</p></li>
+                        <li style="color:rgb(2,71,91);"><p class="para paraMargin">Authentic and top-notch quality products.</p></li>
+                    </ul>
+                </table>
+            </div>
+            <div class="bottomtext2">
+        <img src="/COSMOS APP/Cosmoslogo.jpg">
+        <p class="bt11" style="margin-bottom: 15px; margin-top: 5px;">About Us</p>
+        <div style="display: flex; flex-wrap: wrap;">
+            <li>About Us</li>
+            <li>Contact Us / Grievance</li>
+            <li>FAQs</li>
+            <li>Health Queries</li>
+            <li>Terms and Conditions</li>
+            <li>COSMOS Android App</li>
+            <li>COSMOS iOS App</li>
+            <li>Online Doctor App</li>
+            <li>Online Medicine App</li>
+
+        </div>
+        <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Services</p>
+        <div style="display: flex; flex-wrap: wrap;">
+            <li>Online Doctor Consultation</li>
+            <li>Online Medicines</li>
+            <li>Doctors by Specialty</li>
+            <li>Doctors by City</li>
+            <li>All Doctors List</li>
+        </div>
+        <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Top Specialties</p>
+        <div style="display: flex; flex-wrap: wrap;">
+            <li>Consult Physicians</li>
+            <li>Consult Dermatologists</li>
+            <li>Consult Paediatricians</li>
+            <li>Consult Gastroenterologists</li>
+            <li>Consult Cardiologists</li>
+            <li>Consult Dietitians</li>
+            <li>Consult ENT Specialists</li>
+        </div>
+        <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Book Lab Tests at Home</p>
+        <div style="display: flex; flex-wrap: wrap;">
+            <li>RT PCR Test At Home</li>
+            <li>Book Lab Tests at Home</li>
+            <li>Renal Profile (KFT, RFT Test)</li>
+            <li>Hemogram Test</li>
+            <li>Lipid Profile Test</li>
+            <li>Thyroid Profile Test (T3 T4 Tsh Test)</li>
+            <li>D Dimer Test</li>
+            <li>Urine Culture Test</li>
+            <li>Complete Blood Count (CBC Test)</li>
+            <li>Widal Test</li>
+            <li>Liver Function Test (LFT Test)</li>
+        </div> 
+        <p class="bt11" style="margin-bottom: 15px; margin-top: 20px;">Product Categories</p>  
+        <div style="display: flex; flex-wrap: wrap;">
+             <li>View All Brands</li>
+             <li>Health Care</li>
+             <li>Personal Care</li>
+             <li>Baby Care</li>
+             <li>Nutrition</li>
+             <li>Healthcare Devices</li>
+             <li>Beauty Skin Care</li>
+             <li>Immunity Boosters</li>
+             <li>Disease Prevention</li>
+             <li>Diabetes Care</li>
+
+        </div>
+    </div>
+        </div>
+    </div>    
+        
+
 </body>
 </html>
